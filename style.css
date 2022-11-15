@@ -200,3 +200,18 @@
     
     color: white;
 }
+
+.d-g-button{
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+:hover.d-g-button{
+  background-color: rgb(233, 203, 8);
+  color: white;
+}
+.butn-div{
+  display:flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
