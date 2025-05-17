@@ -1,221 +1,463 @@
-.nav2 {
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  top: 0;
-  justify-content: center;
-  align-items: center;
-  right: 0;
-  display: none;
-  /* background-color: #021c36; */
-  background: rgb(31, 72, 126);
-  z-index: 9999;
-  /* border-radius: 50px; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(10, 25, 47);
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+.heading {
+  color: rgb(197, 210, 254);
+  text-align: center;
+  margin-top: 70px;
 }
 
-.nav2 * {
-  list-style: none;
+/* ************************************************home section******************************************************** */
+#home {
+  width: 85%;
+  margin: auto;
+  height: 85vh;
+  margin-top: 80px;
+  display: table;
+}
+#home > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+#home > div > h2 {
+  color: rgb(225, 231, 253);
+  font-size: 4vw;
+}
+#home > div > h2 > img {
+  width: 5vw;
+}
+
+#home_Name {
+  color: rgb(197, 210, 254);
+  font-size: 7vw;
+}
+#home_Dis {
+  color: rgb(125, 145, 207);
+  font-size: 5vw;
+}
+#homeResumeBtnDiv {
+  width: 60%;
+  margin-top: 40px;
+}
+#resume-button-2 {
+  padding: 7px 8px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 24px;
+  border: 1px solid rgb(89, 226, 197);
+  background-color: #0000;
+  cursor: pointer;
+  transition: 0.4s ease-in-out all;
+}
+#resume-button-2 > a {
+  color: rgb(89, 226, 197);
   text-decoration: none;
-  /* align-content: center; */
-  vertical-align: center;
+}
+#resume-link-2 > button:hover {
+  transform: scale(1.05);
+  color: white;
+  background-color: rgb(89, 226, 197);
+}
+
+/* ***********************************************About section******************************************************** */
+#about_main {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  height: 74vh;
+}
+
+#about_inner {
+  height: 100%;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 4px;
-}
-
-.navigations ul {
-  display: flex;
-  align-items: center;
-}
-
-.navigations ul li a {
-  color: rgb(255, 238, 0);
-  margin-right: 20px;
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.logo-name h1 a {
-  font-size: 25px;
-  text-transform: uppercase;
-  color: rgb(255, 230, 0);
-  font-weight: 800;
-}
-
-.logo-name {
-  display: flex;
   align-items: center;
   padding:0px 15px;
   height: 100%;
 }
 
-.logo-name h1 {
-  margin-top: 10px;
+#profile_img {
+  max-height: 20vw;
+  min-height: 20vw;
+  max-width: 20vw;
+  min-width: 20vw;
+  border: 5px solid rgb(89, 226, 197);
+  font-size: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  align-self: center;
 }
 
-.nav-container {
+#profile_img img {
+  max-height: 20vw;
+  min-height: 20vw;
+  max-width: 20vw;
+  min-width: 20vw;
+}
+
+#user_details {
+  width: 50%;
+  color: rgb(125, 145, 207);
+}
+
+#user_details > h2 {
+  color: rgb(125, 145, 207);
+  font-size: 3vw;
+  text-align: center;
+}
+
+#user_details > p {
+  color: rgb(123, 134, 162);
+  margin-top: 15px;
+  font-size: 20px;
+  text-align: left;
+}
+
+/* Spacing utilities */
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+/* Grid system */
+.row {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  margin-top: 1rem;
+}
+.col-lg-6 {
+  position: relative;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
 }
-
-.green {
-  color: #fffb00
-}
-
-.nav-bg {
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-  background: #0000007a;
-}
-
-.remove-nav .nav-bg {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-  position: fixed;
-  left: 20px;
-  top: 20px;
-}
-
-.hamburger {
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-}
-
-.hamburger span,
-.hamburger span:before,
-.hamburger span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 3px;
-  width: 35px;
-  background: #225AD5;
-  position: absolute;
-  display: inline-block;
-  content: '';
-}
-
-.hamburger span:before {
-  top: -10px;
-}
-
-.hamburger span:after {
-  bottom: -10px;
-}
-
-/*
-#hamburger span, #hamburger span:before, #hamburger span:after {
-  transition: all 200ms ease-in-out;
-}
-*/
-.hamburger span,
-.hamburger span:before,
-.hamburger span:after {
-  -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  -moz-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  -o-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  /* easeInOutCubic */
-}
-
-.hamburger.active span {
-  background-color: transparent;
-}
-
-.hamburger.active span:before,
-.hamburger.active span:after {
-  top: 0;
-}
-
-.hamburger.active span:before {
-  transform: rotate(45deg);
-}
-
-.hamburger.active span:after {
-  transform: translateY(-10px) rotate(-45deg);
-  top: 10px;
-}
-
-.home {
+.col-lg-6 ul {
   display: flex;
-   /* background: url("https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?cs=srgb&dl=pexels-daniel-putzer-633409.jpg&fm=jpg") no-repeat center;  */
-  background: rgb(0, 0, 0);
-  height: 100vh;
-  color: #fff;
-  min-height: 500px;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: "Ubuntu", sans-serif;
+  flex-direction: column;
+  gap: 10px;
 }
-
- @media only screen and (max-width: 750px) {
-    /* .hamburger{
-        display:block;
-    } */
-    
-    .remove-nav {
-        right: 100%;
-    }
-    
-    .logo-name{
-        display:none;
-    }
-
-    .nav-container{
-        flex-direction: column;
-        height: 50%;
-        display: none;
-    }
-/*
-    .navigations{
-        height: 100%;
-    } */
-   /* .navigations ul{
-        height: 100%;
-        flex-direction: column;
-        justify-content:space-between;
-        margin-bottom: 10px;
-    }
-    .navigations ul li a span{
-        font-size: 20px;
-    }
-    .navigations ul li a span:hover{
-        color:green;
-    } */
-
-  } 
- 
-  .border{
-    border: none;
+.col-lg-6 strong {
+  color: white;
+}
+@media (min-width: 992px) {
+  .col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
   }
-  .contrib-number {
-    
-    color: white;
 }
 
-.d-g-button{
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: rgb(22, 48, 83);
-  color: white;
-  border: none;
+/* Text color utility */
+.text-primary {
+  color: rgb(89, 226, 197) !important; /* Bootstrap 5 primary color */
 }
 
-:hover.d-g-button{
-  background-color: rgb(233, 203, 8);
-  color: white;
+/* List utility */
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
 }
-.butn-div{
-  display:flex;
-  justify-content: space-around;
+
+.icofont-rounded-right {
+  color: rgb(89, 226, 197);
+  margin-right: 8px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.row ul{
+  list-style-type: none;
+}
+
+/* ***********************************************skills section******************************************************** */
+#skills {
+  margin-top: 70px;
+  border: 1px solid rgb(10, 25, 47);
+}
+#skills_main {
+  width: 75%;
+  margin: auto;
+  margin-top: 40px;
+  min-height: 74vh;
+}
+
+#skill {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  align-items: center;
+  gap: 20px;
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+}
+.skills-card-img {
+  font-size: 120px;
+  align-self: center;
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+}
+.skills-card-name {
+  color: rgb(125, 145, 207);
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+}
+.skills-card:hover {
+  background-color: rgb(46, 58, 82);
+}
+
+.skills-card:hover .skills-card-name {
+  transform: scale(1.05);
+  background-color: rgb(46, 58, 82);
+}
+.skills-card:hover .skills-card-img {
+  transform: scale(1.05);
+  background-color: rgb(46, 58, 82);
+}
+
+/* ************************************************ Projects section  ******************************************************** */
+
+#projects {
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+  min-height: 74vh;
+}
+
+#displayprojects {
+  margin: auto;
+  margin-top: 30px;
+}
+.project-card {
+  background-color: rgb(29, 70, 82);
+  display: flex;
+  text-align: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+.projectdis {
+  background-color: rgb(29, 70, 82);
+  width: 100%;
+  padding: 20px 30px;
+  transition: 0.4s ease-in-out all;
+}
+.project-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: rgb(197, 210, 254);
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+}
+.projectdis p {
+  font-size: 19px;
   margin-bottom: 10px;
+  color: rgb(123, 134, 162);
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+}
+.projectimg {
+  max-height: 20vw;
+  min-height: 20vw;
+  max-width: 30vw;
+  min-width: 30vw;
+  transition: 0.4s ease-in-out all;
+}
+.logodiv {
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.project-tech-stack > span {
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+  font-weight: bolder;
+  color: rgb(125, 145, 207);
+}
+.project-deployed-link {
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+}
+.project-github-link {
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+}
+.gitlogo {
+  color: white;
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+  font-size: 40px;
+}
+.netlifylogo {
+  color: white;
+  background-color: rgb(29, 70, 82);
+  transition: 0.4s ease-in-out all;
+  font-size: 40px;
+}
+.gitlogo:hover {
+  transform: scale(1.2);
+}
+.netlifylogo:hover {
+  transform: scale(1.1);
+}
+.project-card:hover .projectdis {
+  background-color: rgb(46, 58, 82);
+}
+.project-card:hover .project-title {
+  background-color: rgb(46, 58, 82);
+}
+.project-card:hover .projectdis > p {
+  background-color: rgb(46, 58, 82);
+}
+.project-card:hover .projectimg {
+  transform: scale(1.05);
+}
+.project-card:hover .logodiv {
+  background-color: rgb(46, 58, 82);
+}
+.project-card:hover .netlifylogo {
+  background-color: rgb(46, 58, 82);
+}
+.project-card:hover .gitlogo {
+  background-color: rgb(46, 58, 82);
+}
+.project-card:hover .project-deployed-link {
+  background-color: rgb(46, 58, 82);
+}
+.project-card:hover .project-tech-stack > span {
+  background-color: rgb(46, 58, 82);
+}
+.project-card:hover .project-github-link {
+  background-color: rgb(46, 58, 82);
+}
+
+/* ************************************************ GitHub calendar ******************************************************** */
+
+.react-activity-calendar {
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+  color: white;
+}
+#stats_imgs {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+/* ************************************************ media Query ******************************************************** */
+
+#contact {
+  width: 70%;
+  margin: auto;
+  min-height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+.contact_card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.contact_card iconify-icon {
+  font-size: 4vw;
+}
+
+.contact_card a,
+p {
+  font-size: 20px;
+  color: rgb(197, 210, 254);
+}
+/* ************************************************ media Query ******************************************************** */
+
+@media screen and (max-width: 768px) {
+  /* ....................home...................... */
+  #home > div > h2 {
+    font-size: 7vw;
+  }
+  #home > div > h2 > img {
+    width: 8vw;
+  }
+
+  #home_Name {
+    font-size: 10vw;
+  }
+  #home_Dis {
+    font-size: 8vw;
+  }
+  #contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact_card iconify-icon {
+    font-size: 5vw;
+  }
+
+  .contact_card a,
+  p {
+    font-size: 10px;
+    color: rgb(197, 210, 254);
+  }
+  /* ....................about...................... */
+  #about_inner {
+    flex-direction: column;
+  }
+  #profile_img {
+    max-height: 30vw;
+    min-height: 30vw;
+    max-width: 30vw;
+    min-width: 30vw;
+  }
+  #profile_img img {
+    max-height: 30vw;
+    min-height: 30vw;
+    max-width: 30vw;
+    min-width: 30vw;
+  }
+  #user_details {
+    width: 80%;
+    margin-top: 30px;
+  }
+  #user_details > h2 {
+    color: rgb(125, 145, 207);
+    font-size: 5vw;
+  }
+  /* project */
+}
+
+@media screen and (max-width: 1420px) {
+  .project-card {
+    flex-direction: column;
+  }
+  .projectimg {
+    align-self: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 50%;
+    min-height: 50%;
+  }
 }
